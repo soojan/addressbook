@@ -115,21 +115,21 @@ if(!empty($_GET['r']) && $_GET['r']==1){
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputName">Name</label>
-                    <input type="text" class="form-control" id="name" name="inputName" placeholder="Good name" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[1];  ?>">
+                    <input type="text" class="form-control" id="name" name="inputName" placeholder="Good name" required value="<?php if(!empty($_SESSION['editid'])) { $tuple = $_SESSION['editid']; echo $tuple[1];}  ?>">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputMobile">Mobile</label>
-                    <input type="text" class="form-control" id="mobile" name="inputMobile" placeholder="Mobile number" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[2];  ?>">
+                    <input type="text" class="form-control" id="mobile" name="inputMobile" placeholder="Mobile number" required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[2]; } ?>">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputAddress">Address Tole/Ward</label>
-                <input type="text" class="form-control" id="address" name="inputAddress" placeholder="Nadipur-3" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[3];  ?>">
+                <input type="text" class="form-control" id="address" name="inputAddress" placeholder="Nadipur-3" required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[3]; } ?>">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="city" name="inputCity" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[4];  ?>">
+                    <input type="text" class="form-control" id="city" name="inputCity" required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[4];}  ?>">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputState">State</label>
@@ -141,27 +141,27 @@ if(!empty($_GET['r']) && $_GET['r']==1){
                 </div>
                 <div class="form-group col-md-2">
                     <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="zip" name="inputZip" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[6];  ?>">
+                    <input type="text" class="form-control" id="zip" name="inputZip" required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[6]; } ?>">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail">Email</label>
-                    <input type="text" class="form-control" id="email" name="inputEmail" placeholder="foo@bar.com" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[7];  ?>">
+                    <input type="text" class="form-control" id="email" name="inputEmail" placeholder="foo@bar.com" required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[7]; } ?>">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputLandline">Landline</label>
-                    <input type="text" class="form-control" id="landline" name="inputLandline" placeholder="Landline number" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[8];  ?>">
+                    <input type="text" class="form-control" id="landline" name="inputLandline" placeholder="Landline number" required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[8];}  ?>">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputWebsite">Website</label>
-                    <input type="text" class="form-control" id="website" name="inputWebsite" placeholder="www.google.com" required value="<?php $tuple = $_SESSION['editid']; echo $tuple[9];  ?>">
+                    <input type="text" class="form-control" id="website" name="inputWebsite" placeholder="www.google.com" required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[9]; } ?>">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputCompany">Organization Name</label>
-                    <input type="text" class="form-control" id="company" name="inputCompany" placeholder="Google Inc." required value="<?php $tuple = $_SESSION['editid']; echo $tuple[10];  ?>">
+                    <input type="text" class="form-control" id="company" name="inputCompany" placeholder="Google Inc." required value="<?php if(!empty($_SESSION['editid'])) {$tuple = $_SESSION['editid']; echo $tuple[10]; } ?>">
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" id="updatecontact">Update</button>
